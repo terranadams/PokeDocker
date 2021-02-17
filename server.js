@@ -1,7 +1,13 @@
-const app = require('express')
+const express = require('express')
 
-app.listen(8080, () => {
-    console.log('Listening on port 8081')
+const app = express()
+
+app.get('/', (req, res) => {
+    res.send('Hello world!\n');
+});
+
+app.listen(8082, () => {
+    console.log('Listening on port 8082')
 })
 
 // Whenever we rebuild the app, we need to delete its container, make the image changes and rebuild it, and then create a new container.
