@@ -1,6 +1,14 @@
 version: "3.8"
 services: 
-  pokeApp:
+  pokeApp1:
     image: pokeim
     ports: 
       - 8082:8082
+    deploy:
+      replicas: 3
+    pokeApp2:
+    image: pokeim
+    ports: 
+      - 8082:8082
+    deploy:
+      replicas: 3
